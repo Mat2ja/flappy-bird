@@ -23,7 +23,8 @@ body {
 .game-container {
   width: 50rem;
   height: 73rem;
-  position: absolute; }
+  position: absolute;
+  overflow: hidden; }
   .game-container::before {
     content: '';
     position: absolute;
@@ -45,7 +46,9 @@ body {
   height: 6.1rem;
   position: absolute;
   bottom: 0;
-  z-index: 990; }
+  background: #f5cc97;
+  filter: hue-rotate(60deg);
+  z-index: 99; }
 
 .bird {
   background: url(../img/bird.png);
@@ -57,8 +60,17 @@ body {
   z-index: 10; }
 
 .obstacle {
-  background: #128012;
+  background: url(../img/pipe.png);
+  filter: hue-rotate(60deg);
   width: 6rem;
   height: 30rem;
   position: absolute;
   z-index: 20; }
+  .obstacle--top {
+    background: url(../img/pipe.png);
+    filter: hue-rotate(60deg);
+    width: 6rem;
+    height: 28rem;
+    position: absolute;
+    z-index: 20;
+    transform: rotate(180deg); }

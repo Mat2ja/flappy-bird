@@ -15,21 +15,23 @@ html {
 }
 
 body {
-    font-size: 1.6rem;
-    min-height: 100vh;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	font-size: 1.6rem;
+	min-height: 100vh;
 
-    background: url(../img/bg.png);
-    backdrop-filter: blur(20px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background: url(../img/bg.png);
+	backdrop-filter: blur(20px);
 }
 
 .game-container {
 	width: 50rem;
 	height: 73rem;
 	position: absolute;
+	overflow: hidden;
+	// left: 8rem;
 
 	&::before {
 		content: '';
@@ -44,6 +46,33 @@ body {
 	}
 }
 
+// .border-left {
+// 	width: 8rem;
+// 	height: 79rem;
+// 	position: absolute;
+// 	background: white;
+// 	z-index: 10;
+// }
+
+
+// .border-right {
+// 	width: 8rem;
+// 	height: 79rem;
+// 	position: absolute;
+// 	background: white;
+// 	z-index: 10;
+// 	left: 58rem;
+// }
+
+// .border-top {
+// 	width: 66rem;
+// 	height: 5rem;
+// 	position: absolute;
+// 	background: white;
+// 	z-index: 10;
+// 	top: -5rem;
+// }
+
 .sky {
 	width: 50rem;
 	height: calc(73rem - 6.1rem);
@@ -56,8 +85,10 @@ body {
 	height: 6.1rem;
 	position: absolute;
 	bottom: 0;
-	// background: rgb(245, 204, 151);
-    z-index: 990;
+	background: rgb(245, 204, 151);
+	filter: hue-rotate(60deg);
+
+	z-index: 99;
 }
 
 .bird {
@@ -72,9 +103,21 @@ body {
 }
 
 .obstacle {
-	background: rgb(18, 128, 18);
+	background: url(../img/pipe.png);
+	filter: hue-rotate(60deg);
 	width: 6rem;
 	height: 30rem;
 	position: absolute;
 	z-index: 20;
+
+	&--top {
+		background: url(../img/pipe.png);
+		filter: hue-rotate(60deg);
+		width: 6rem;
+		height: 28rem;
+		position: absolute;
+		z-index: 20;
+
+		transform: rotate(180deg);
+	}
 }
