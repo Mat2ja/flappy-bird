@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-size: 1.6rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../img/bg.png);
+  backdrop-filter: blur(20px); }
+
+.game-container {
+  width: 50rem;
+  height: 73rem;
+  position: absolute; }
+  .game-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/bg.png);
+    background-position: bottom;
+    filter: hue-rotate(60deg); }
+
+.sky {
+  width: 50rem;
+  height: calc(73rem - 6.1rem);
+  position: absolute; }
+
+.ground {
+  width: 50rem;
+  height: 6.1rem;
+  position: absolute;
+  bottom: 0;
+  z-index: 990; }
+
+.bird {
+  background: url(../img/bird.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 6rem;
+  height: 4.5rem;
+  z-index: 10; }
+
+.obstacle {
+  background: #128012;
+  width: 6rem;
+  height: 30rem;
+  position: absolute;
+  z-index: 20; }
